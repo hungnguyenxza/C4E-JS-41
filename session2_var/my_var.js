@@ -60,10 +60,32 @@ console.log(y);
 // }
 // console.log(x);
 
+let x;
 x = 100;
 console.log(x);
 // var x;
-let x;
+
+let money = 1780000;
+
+let n100 = Math.floor(money / 100000);
+money = money - n100 * 100000;
+
+let n50 = Math.floor(money / 50000);
+money = money - n50 * 50000;
+
+
+let n20 = Math.floor(money / 20000);
+money = money - n20 * 20000;
+
+let n10 = Math.floor(money / 10000);
+money = money - n50 * 10000;
+
+console.log(n100);
+console.log(n50);
+console.log(n20);
+console.log(n10);
+
+
 
 
 
