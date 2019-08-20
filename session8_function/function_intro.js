@@ -196,15 +196,127 @@
 // console.log("Kết quả: ");
 // console.log(person);
 
-let arr = [1,2,3,4,5,6];// biến toàn cục
-function nhanDoi3(){
-    // index : biến cục bộ
-    var index;
-    for (index = 0; index < arr.length; index++) {
-        arr[index] *= 2;        
-    }
-}
-nhanDoi3(arr);
-console.log(arr);
-console.log(index);
+// let arr = [1,2,3,4,5,6];// biến toàn cục
+// function nhanDoi3(){
+//     // index : biến cục bộ
+//     var index;
+//     for (index = 0; index < arr.length; index++) {
+//         arr[index] *= 2;        
+//     }
+// }
+// nhanDoi3(arr);
+// console.log(arr);
+// console.log(index);
 
+// ======================== =====================//
+// function sum(a = 0, b = 0){
+//     return a + b;
+// }
+
+// console.log(sum());
+// console.log(sum(5));
+
+// function sum1(a, b){
+//     console.log(a);
+//     if(!a) a = 0;
+//     console.log(a);
+
+//     if(a && b){
+//         return a + b;
+//     }
+//     console.log("Không đủ số hạng");
+//     var x = "";
+//     if(x){
+        
+//     }
+// }
+
+// sum1();
+
+let list_number = [40, 100, 1, 5, 25, 10];
+
+list_number.sort(function (a, b){
+    return a - b;
+});
+
+// console.log(list_number);
+
+let list_book = [
+    {
+        name: 'Thư pháp',
+        amount: 10,
+        price: 20000,
+    },
+    {
+        name: 'Ngụ ngôn',
+        amount: 15,
+        price: 10000,
+    },
+    {
+        name: 'Tiểu thuyết',
+        amount: 5,
+        price: 50000,
+    },
+    {
+        name: 'Truyện cười',
+        amount: 8,
+        price: 80000,
+    }
+];
+// //Sắp xếp theo Amount
+// list_book.sort(function (b1, b2){ // Tăng dần
+//     return b1.amount - b2.amount;
+// });
+// console.log(list_book);
+// list_book.sort(function (b1, b2){ // Giảm dần 
+//     return b2.amount - b1.amount;
+// });
+// console.log(list_book);
+// //Sắp xếp theo Price
+// list_book.sort(function (b1, b2){
+//     return b1.price - b2.price;
+// });
+// console.log(list_book);
+// //Sắp xếp theo Tổng giá trị
+// list_book.sort(function (b1, b2){
+//     return b1.amount * b1.price - b2.amount * b2.price;
+// });
+// console.log(list_book);
+
+// function sortAmountAsc(a, b){
+//     return a - b;
+// }
+
+// list_book.sort(sortAmountAsc); // Gửi định nghĩa funcion sortAmountAsc 
+//                                 // cho function sort của array
+
+// function sortAmountDesc(a, b){
+//     return b - a;
+// }            
+
+// list_book.sort(sortAmountDesc);    
+
+// let N = 0;// Number(prompt("Nhập số lượng nhỏ nhất: "));
+
+// function filterAmount(book){
+//     return book.amount >= N;
+// }
+// // console.log(list_book.filter(filterAmount));
+
+// let search = prompt("Nhập sách muốn tìm kiếm: ");
+// function searchBook(book){
+//     let result = book.name.toUpperCase().indexOf(search.toUpperCase());
+//     return result >= 0;
+// }
+// console.log(list_book.filter(searchBook));
+
+// Đệ quy
+
+// Tính N!
+
+function giaiThua(n){
+    if(n === 0 || n === 1) return 1;//
+    return n * giaiThua(n - 1);
+}
+giaiThua(5);
+// Tình x^y
